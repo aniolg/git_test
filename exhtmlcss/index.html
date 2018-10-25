@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/mainpage.css">
+	<link href="icon/css/all.css" rel="stylesheet">
+	<script src="js/jquery.slim.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-light" id="mcontainer_mainmenu">
+	
+	 
+	<div class="prl_40" id="mcontainer_logo"> 
+		<a href="#"><i class="fas fa-book"></i> eLlibres</a>
+	</div>
+
+
+	<div id="mcontainer_toggler"> 
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mcontent_collapsed">
+    	<span class="navbar-toggler-icon" ></span>
+  	</button>
+  	</div>
+
+
+	<div class="collapse navbar-collapse">
+	
+	<div class="btn-group" id="mcontainer_categories" role="group">
+
+	  <button type="button" class="btn btn-outline-light">Random</button>
+
+	  <div class="dropdown btn-group" role="group">
+	  	<button class="btn btn-outline-light dropdown-toggle" type="button" data-toggle="dropdown">Categories</button>
+	  	<div class="dropdown-menu">
+		    <a class="dropdown-item" href="#">Crime Novels</a>
+		    <a class="dropdown-item" href="#">Fiction Novels</a>
+		    <a class="dropdown-item" href="#">Romance Novels</a>
+		    <a class="dropdown-item" href="#">Self Help Educational Books</a>
+		    <div class="dropdown-divider"></div>
+		    <a class="dropdown-item" href="#">For Childs</a>
+		    <a class="dropdown-item" href="#">For Teenagers</a>
+  		</div>
+	  </div>
+
+	</div>
+
+
+	<form class="form-inline input-group pr_40">
+		  	<input type="search" class="form-control" placeholder="Titles, autors, ...">
+		  	<div class="input-group-append">
+				<button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
+			</div>
+	</form>
+
+	</div>
+
+	<div class="collapse" id="mcontent_collapsed">
+	<div class="prl_40" id="mcontainer_collapsed">	
+		
+		<form class="form-inline input-group input-group-lg pt_20">
+		  	<input type="search" class="form-control" placeholder="Titles, autors, ...">
+		  	<div class="input-group-append">
+				<button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
+			</div>
+		</form>
+
+		<div class="pt_20">
+			<button type="button" class="btn btn-lg btn-light w-100">Random</button>
+		</div>
+
+		<div class="btn-group-vertical btn-group-lg w-100 pt_20 pb_40" id="mlist_collapsed">
+			<button type="button" class="btn btn-outline-light">Crime Novels</button>
+			<button type="button" class="btn btn-outline-light">Fiction Novels</button>
+			<button type="button" class="btn btn-outline-light">Romance Novels</button>
+			<button type="button" class="btn btn-outline-light">Self Help Educational Books</button>
+			<button type="button" class="btn btn-light">For Childs</button>
+			<button type="button" class="btn btn-light">For Teenagers</button>
+		</div>
+	</div>
+	</div>
+
+
+
+
+</nav>
+</body>
+</html>

@@ -1,0 +1,50 @@
+
+.pr_40{
+	padding-right: 40px;
+}
+
+.pt_20{
+	padding-top: 20px;
+}
+
+.prl_40{
+	padding-right: 40px;
+	padding-left: 40px;
+}
+
+.pb_40{
+	padding-bottom: 40px;
+}
+
+
+.navbar{
+	padding:0 0;
+}
+
+#mcontainer_mainmenu{
+	background-color:#3C245E !important;
+	height: 75px;
+}
+
+#mcontainer_logo a{
+	color:#03D1AB;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+#mcontainer_categories{
+	min-width: fit-content;
+	padding-right: 40px;
+}
+
+#mcontainer_toggler{
+	color:#fff;
+}
+
+#mcontent_collapsed{
+	background-color: #3C245E;
+	width:100%;
+}
+
+
+
