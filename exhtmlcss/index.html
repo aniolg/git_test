@@ -9,24 +9,16 @@
 	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-md navbar-dark bg-light" id="mcontainer_mainmenu">
+<nav class="navbar navbar-expand-lg navbar-dark bg-light" id="mcontainer_mainmenu">
 	
 	 
-	<div class="prl_40" id="mcontainer_logo"> 
+	<div class="px-5" id="mcontainer_logo"> 
 		<a href="#"><i class="fas fa-book"></i> eLlibres</a>
 	</div>
 
-
-	<div id="mcontainer_toggler"> 
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mcontent_collapsed">
-    	<span class="navbar-toggler-icon" ></span>
-  	</button>
-  	</div>
-
-
 	<div class="collapse navbar-collapse">
 	
-	<div class="btn-group" id="mcontainer_categories" role="group">
+	<div class="btn-group pr-4" id="mcontainer_categories" role="group">
 
 	  <button type="button" class="btn btn-outline-light">Random</button>
 
@@ -46,7 +38,7 @@
 	</div>
 
 
-	<form class="form-inline input-group pr_40">
+	<form class="form-inline input-group pr-4">
 		  	<input type="search" class="form-control" placeholder="Titles, autors, ...">
 		  	<div class="input-group-append">
 				<button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
@@ -55,21 +47,33 @@
 
 	</div>
 
+	<div class="px-lg-5" id="mbuttons_usercart">
+		<button type="button" class="btn dropdown-toggle"><i class="fas fa-user"></i></button>
+		<button type="button" class="btn dropdown-toggle"><i class="fas fa-shopping-cart"></i></button>
+	</div>
+
+	<div class="pr-5 d-lg-none" id="mcontainer_toggler"> 
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mcontent_collapsed">
+		<span class="navbar-toggler-icon" ></span>
+		</button>
+	</div>
+
+
 	<div class="collapse" id="mcontent_collapsed">
-	<div class="prl_40" id="mcontainer_collapsed">	
+	<div class="px-5 py-5" id="mcontainer_collapsed">	
 		
-		<form class="form-inline input-group input-group-lg pt_20">
+		<form class="form-inline input-group input-group-lg pt-2">
 		  	<input type="search" class="form-control" placeholder="Titles, autors, ...">
 		  	<div class="input-group-append">
 				<button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
 			</div>
 		</form>
 
-		<div class="pt_20">
+		<div class="pt-4">
 			<button type="button" class="btn btn-lg btn-light w-100">Random</button>
 		</div>
 
-		<div class="btn-group-vertical btn-group-lg w-100 pt_20 pb_40" id="mlist_collapsed">
+		<div class="btn-group-vertical btn-group-lg w-100 pt-2" id="mlist_collapsed">
 			<button type="button" class="btn btn-outline-light">Crime Novels</button>
 			<button type="button" class="btn btn-outline-light">Fiction Novels</button>
 			<button type="button" class="btn btn-outline-light">Romance Novels</button>
@@ -81,8 +85,17 @@
 	</div>
 
 
-
-
 </nav>
+
+<div class="container">
+	<div class="content container">
+		<div class="row">
+			<div class="llibres col-lg-12" id="ll_novela">
+
+			</div><!-- llibres col-lg-12 -->
+		</div><!-- row -->
+	</div><!-- content container -->
+</div><!-- container -->
+
 </body>
 </html>
