@@ -31,5 +31,45 @@
 	width:100%;
 }
 
+.banner{
+	padding:0.5rem;
+}
+
+@media (max-width: 991.98px) {
+	.banner{
+		padding-top:2rem;
+	}
+ }
+
+
+.banner_content{
+	background-color: #CCCCCC;
+	box-sizing: border-box;
+	overflow: auto;
+	padding:2rem;
+}
+
+.banner img{
+	display: inline-block;
+	float: left;
+	height:100%;
+	max-height: 200px;
+	margin-right: 1rem;
+}
+
+.banner .badge{
+	color: #CCCCCC;
+	background-color: #03D1AB;
+
+}
+
+.banner button{
+	padding-right: 2rem;
+	padding-left: 2rem;
+	
+}
+
+
+
 
 
