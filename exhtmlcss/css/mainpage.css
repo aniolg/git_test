@@ -41,33 +41,44 @@
 	}
  }
 
-
 .banner_content{
 	background-color: #CCCCCC;
 	box-sizing: border-box;
-	overflow: auto;
-	padding:2rem;
+	padding:1.25rem;
+	margin:0;
 }
 
-.banner img{
-	display: inline-block;
-	float: left;
-	height:100%;
-	max-height: 200px;
-	margin-right: 1rem;
+.banner_text{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
-.banner .badge{
+.banner_text .badge{
 	color: #CCCCCC;
-	background-color: #03D1AB;
-
+	background-color: #3C245E;
+	margin-left:1rem;
 }
 
-.banner button{
-	padding-right: 2rem;
-	padding-left: 2rem;
+.banner_text button{
+	margin-top:0.8rem;
 	
 }
+
+@media (max-width: 991.98px) {
+	.banner_img{
+		display: flex;
+		justify-content: center;
+		padding-bottom:0.8rem;
+	}
+ }
+
+ .banner_img img{
+	display: inline-block;
+	max-height: 200px;
+}
+
+
 
 
 
