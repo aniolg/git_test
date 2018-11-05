@@ -29,7 +29,81 @@
 #mcontent_collapsed{
 	background-color: #3C245E;
 	width:100%;
+	z-index: 10;
 }
+
+.container_full{
+	background-image: url(../img/ti_haloween.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover; 
+}
+
+
+@media (min-width: 576px) {
+	.container_full{
+		background-image: url(../img/ti_haloween.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+	}
+}
+
+.top_banner{
+	background: none;
+	color: #fff;
+}
+
+.books{
+	padding-top: 2rem;
+}
+
+.product{
+	width:100%;
+}
+
+.product .discount{
+	background-color: #03D1AB;
+	font-size: 1rem;
+	margin: 0.5rem;
+    position: absolute;
+    z-index: 5;
+}
+
+.product button{
+	color:#03D1AB;
+	border-color: #03D1AB;
+	width: 100%
+}
+
+.product button:hover{
+	color:#fff;
+	border-color: #fff;
+	background-color: #03D1AB;
+}
+
+.autor{
+	font-style: italic;
+}
+
+.price{
+	color: #03D1AB;
+	font-size: 1.25rem;
+	font-weight:700;
+}
+
+.pre-price{
+	color: #CCCCCC;
+	text-decoration-line: line-through;
+}
+
+
+
+
+
+
+
 
 .banner{
 	padding:0.5rem;
@@ -76,6 +150,16 @@
  .banner_img img{
 	display: inline-block;
 	max-height: 200px;
+}
+footer{
+	background-color: #3C245E;
+	margin-top: 4rem;
+}
+
+#footer_container{
+	color: #CCCCCC;
+	padding-top:5rem;
+	padding-bottom: 5rem; 
 }
 
 
