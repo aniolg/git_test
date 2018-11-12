@@ -5,20 +5,25 @@
 var name = ["A", "N", "I", "O", "L"];
 var surname = ["G", "O", "M", "E", "Z"];
 
-function linkFullName() {
-    var fullName = [];
+var fullName = [];
 
-    for (i = 0; i < name.length; i++) {
-        fullName.push(name[i]);
+function addFullName(lletra){
+    fullName.push(lletra);
+}
+
+function linkFullName(arrayA,arrayB) {
+
+    for (i = 0; i < arrayA.length; i++) {
+        addFullName(arrayA[i]);
     }
 
-    fullName.push(" ");
+    addFullName(" ");
 
-    for (i = 0; i < surname.length; i++) {
-        fullName.push(surname[i]);
+    for (i = 0; i < arrayB.length; i++) {
+        addFullName(arrayB[i]);
     }
 
     return fullName;
 }
 
-console.log(linkFullName());
+console.log(linkFullName(name,surname));

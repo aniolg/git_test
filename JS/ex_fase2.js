@@ -6,6 +6,46 @@ var nomArray = ["A", "N", "I", "O", "L", "5",];
 var vocals = ["A", "E", "I", "O", "U"];
 
 
+function isVocal(lletra) {
+    return vocals.indexOf(lletra) != -1 && isNaN(lletra) == true;
+}
+
+function isConsonant(lletra) {
+    return vocals.indexOf(lletra) == -1 && isNaN(lletra) == true;
+}
+
+function letterIdentify() {
+    var i;
+    var nomString = "";
+    for (i = 0; i < nomArray.length; i++) {
+
+        if (isVocal(nomArray[i])) {
+            nomString += nomArray[i] + " - vocal, ";
+
+        } else if (isConsonant(nomArray[i])) {
+            nomString += nomArray[i] + " - consonant, ";
+
+        } else {
+            nomString = "Els noms de persones no contenen números!";
+            i = nomArray.length;
+        }
+    }
+
+    return nomString;
+}
+
+console.log(letterIdentify());
+
+
+
+/*--------------------------------------------*/
+//sense functions
+
+/*
+var nomArray = ["A", "N", "I", "O", "L", "5",];
+var vocals = ["A", "E", "I", "O", "U"];
+
+
 
 function identificarLletres() {
     var i;
@@ -28,8 +68,6 @@ function identificarLletres() {
 }
 
 console.log(identificarLletres());
-
-
 
 
 /*--------------------------------------------*/
