@@ -1,0 +1,18 @@
+header{
+    color:#fff;
+    background-color: #495057;
+    text-align: center;
+    padding: 20px;
+}
+
+header .fa-rocket{
+    color:#28a9ff;
+}
+
+#div_coets{
+    padding: 20px 0 20px 0;
+}
+
+#div_coets .fa-space-shuttle{
+    color:#495057;
+}
