@@ -14,13 +14,29 @@ rockets[1].addDrive("D1_" + rockets[1].id, 10);
 
 function listRockets() {
     var rocketsList = `<ul class="list-group">`;
-    
+
     for (var i = 0; i < rockets.length; i++) {
-        rocketsList += 
-        `<li class="list-group-item">
-        <i class="fas fa-space-shuttle fa-rotate-270"></i>
-        El coet ${rockets[i].id} te ${rockets[i].numDrives} propulsors: ${rockets[i].drives[i].maxPower}.
-        </li>`;
+        if (rockets[i].checkedId(rockets[i].id) == " ") {
+            rocketsList +=
+                `<li class="list-group-item list-group-item-warning">
+                <i class="fas fa-exclamation-triangle"></i> 
+                La ID del coet és massa curta! (introdueixi una ID de mínim 8 caràcters)
+                </li>`
+        } else {
+            rocketsList +=
+                `<li class="list-group-item">
+                <i class="fas fa-space-shuttle fa-rotate-270"></i> 
+                El coet ${rockets[i].id} te ${rockets[i].numDrives} propulsors:`;
+
+            for (var j = 0; j < rockets[i].drives.length; j++) {
+
+                if (j != rockets[i].drives.length - 1) {
+                    rocketsList += ` ${rockets[i].drives[j].maxPower},`;
+                } else {
+                    rocketsList += ` ${rockets[i].drives[j].maxPower}</li>`;
+                }
+            }
+        }
     }
 
     rocketsList += "</ul>";
@@ -31,5 +47,4 @@ function listRockets() {
 function loadContent() {
     document.getElementById("div_coets").innerHTML = listRockets();
 }
-
 

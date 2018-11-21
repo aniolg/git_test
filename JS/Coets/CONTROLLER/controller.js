@@ -13,8 +13,22 @@ rockets[1].addDrive("D1_" + rockets[1].id, 10);
 function listRockets() {
     var rocketsList = "<ul class=\"list-group\">";
     for (var i = 0; i < rockets.length; i++) {
-        rocketsList +=
-            "<li class=\"list-group-item\">\n        <i class=\"fas fa-space-shuttle fa-rotate-270\"></i>\n        El coet " + rockets[i].id + " te " + rockets[i].numDrives + " propulsors: " + rockets[i].drives[i].maxPower + ".\n        </li>";
+        if (rockets[i].checkedId(rockets[i].id) == " ") {
+            rocketsList +=
+                "<li class=\"list-group-item list-group-item-warning\">\n                <i class=\"fas fa-exclamation-triangle\"></i> \n                La ID del coet \u00E9s massa curta! (introdueixi una ID de m\u00EDnim 8 car\u00E0cters)\n                </li>";
+        }
+        else {
+            rocketsList +=
+                "<li class=\"list-group-item\">\n                <i class=\"fas fa-space-shuttle fa-rotate-270\"></i> \n                El coet " + rockets[i].id + " te " + rockets[i].numDrives + " propulsors:";
+            for (var j = 0; j < rockets[i].drives.length; j++) {
+                if (j != rockets[i].drives.length - 1) {
+                    rocketsList += " " + rockets[i].drives[j].maxPower + ",";
+                }
+                else {
+                    rocketsList += " " + rockets[i].drives[j].maxPower + "</li>";
+                }
+            }
+        }
     }
     rocketsList += "</ul>";
     return rocketsList;

@@ -11,16 +11,25 @@ class Drive {
 class Rocket {
     id: string;
     numDrives: number;
-    drives: Drive[];
+    drives: Drive[]=[];
 
     constructor(id: string) {
         this.id = id;
         this.numDrives = 0;
     }
 
+    checkedId(idIn:string){
+        if (idIn.length >= 8){
+            return idIn;
+        }else{
+            return " ";
+        }
+    }
+
     addDrive(idDrive,maxPowerDrive) {
             this.drives.push(new Drive(idDrive, maxPowerDrive));
             ++this.numDrives;
         }
+    
 
 }
