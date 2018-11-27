@@ -10,7 +10,7 @@ rockets[1].addDrive("D1_" + rockets[1].id, 50);
 rockets[1].addDrive("D1_" + rockets[1].id, 50);
 rockets[1].addDrive("D1_" + rockets[1].id, 30);
 rockets[1].addDrive("D1_" + rockets[1].id, 10);
-//accelerar 3 cops
+//Accelerar 3 cops
 for (var i = 0; i < 3; i++) {
     rockets[0].accelerate();
     rockets[1].accelerate();
@@ -18,7 +18,7 @@ for (var i = 0; i < 3; i++) {
 rockets[0].getActualVelocity();
 rockets[1].getActualVelocity();
 alert("Velocitat coet " + rockets[0].id + ": " + rockets[0].actualVelocity + " || Velocitat coet " + rockets[1].id + ": " + rockets[1].actualVelocity);
-//frena 5 cops
+//Frena 5 cops
 for (var i = 0; i < 5; i++) {
     rockets[0].slowDown();
     rockets[1].slowDown();
@@ -26,7 +26,7 @@ for (var i = 0; i < 5; i++) {
 rockets[0].getActualVelocity();
 rockets[1].getActualVelocity();
 alert("Velocitat coet " + rockets[0].id + ": " + rockets[0].actualVelocity + " || Velocitat coet " + rockets[1].id + ": " + rockets[1].actualVelocity);
-//accelerar 15 cops
+//Accelerar 15 cops
 for (var i = 0; i < 15; i++) {
     rockets[0].accelerate();
     rockets[1].accelerate();
