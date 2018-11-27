@@ -14,5 +14,17 @@ header .fa-rocket{
 }
 
 #div_coets .fa-space-shuttle{
-    color:#495057;
+    color:#28a9ff;
+}
+
+.badge-pill {
+    display: block !important;
+}
+
+.fa-battery-half{
+    color:#ffc107;
+}
+
+.fa-battery-full{
+    color:#dc3545;
 }
