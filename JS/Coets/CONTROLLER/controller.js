@@ -1,15 +1,3 @@
-var rockets = [];
-rockets[0] = new Rocket("32WESSDS");
-rockets[0].addDrive("D1_" + rockets[0].id, 10);
-rockets[0].addDrive("D2_" + rockets[0].id, 30);
-rockets[0].addDrive("D3_" + rockets[0].id, 80);
-rockets[1] = new Rocket("LDSFJA32");
-rockets[1].addDrive("D1_" + rockets[1].id, 30);
-rockets[1].addDrive("D1_" + rockets[1].id, 40);
-rockets[1].addDrive("D1_" + rockets[1].id, 50);
-rockets[1].addDrive("D1_" + rockets[1].id, 50);
-rockets[1].addDrive("D1_" + rockets[1].id, 30);
-rockets[1].addDrive("D1_" + rockets[1].id, 10);
 //Accelerar 3 cops
 for (var i = 0; i < 3; i++) {
     rockets[0].accelerate();
@@ -17,7 +5,7 @@ for (var i = 0; i < 3; i++) {
 }
 rockets[0].getActualVelocity();
 rockets[1].getActualVelocity();
-alert("Velocitat coet " + rockets[0].id + ": " + rockets[0].actualVelocity + " || Velocitat coet " + rockets[1].id + ": " + rockets[1].actualVelocity);
+//alert (`Velocitat coet ${rockets[0].id}: ${rockets[0].actualVelocity} || Velocitat coet ${rockets[1].id}: ${rockets[1].actualVelocity}`);
 //Frena 5 cops
 for (var i = 0; i < 5; i++) {
     rockets[0].slowDown();
@@ -25,7 +13,7 @@ for (var i = 0; i < 5; i++) {
 }
 rockets[0].getActualVelocity();
 rockets[1].getActualVelocity();
-alert("Velocitat coet " + rockets[0].id + ": " + rockets[0].actualVelocity + " || Velocitat coet " + rockets[1].id + ": " + rockets[1].actualVelocity);
+//alert (`Velocitat coet ${rockets[0].id}: ${rockets[0].actualVelocity} || Velocitat coet ${rockets[1].id}: ${rockets[1].actualVelocity}`);
 //Accelerar 15 cops
 for (var i = 0; i < 15; i++) {
     rockets[0].accelerate();
@@ -33,7 +21,7 @@ for (var i = 0; i < 15; i++) {
 }
 rockets[0].getActualVelocity();
 rockets[1].getActualVelocity();
-alert("Velocitat coet " + rockets[0].id + ": " + rockets[0].actualVelocity + " || Velocitat coet " + rockets[1].id + ": " + rockets[1].actualVelocity);
+//alert (`Velocitat coet ${rockets[0].id}: ${rockets[0].actualVelocity} || Velocitat coet ${rockets[1].id}: ${rockets[1].actualVelocity}`);
 function listRockets() {
     var rocketsList = "<ul class=\"list-group\">";
     for (var i = 0; i < rockets.length; i++) {
@@ -64,4 +52,18 @@ function listRockets() {
 }
 function loadContent() {
     document.getElementById("div_coets").innerHTML = listRockets();
+}
+var iFormDrive = 2;
+function addFormDrive() {
+    var contentDriveForm = "\n    \n    <H6>Propulsor " + iFormDrive + "</H6>\n    <div class=\"btn-group btn-group-toggle from_drive\" data-toggle=\"buttons\">\n    <div class=\"input-group-prepend\">\n        <span class=\"input-group-text\" id=\"basic-addon1\">Pot\u00E8ncia M\u00E0xima</span>\n    </div>\n    <label class=\"btn btn-outline-primary active\">\n        <input type=\"radio\" name=\"potencia\" value=\"10\" autocomplete=\"off\" checked>10\n    </label>\n    <label class=\"btn btn-outline-primary\">\n        <input type=\"radio\" name=\"potencia\" value=\"20\" autocomplete=\"off\">20\n    </label>\n    <label class=\"btn btn-outline-primary\">\n        <input type=\"radio\" name=\"potencia\" value=\"30\" autocomplete=\"off\">30\n    </label>\n    <label class=\"btn btn-outline-primary\">\n        <input type=\"radio\" name=\"potencia\" value=\"40\" autocomplete=\"off\">40\n    </label>\n    <label class=\"btn btn-outline-primary\">\n        <input type=\"radio\" name=\"potencia\" value=\"50\" autocomplete=\"off\">50\n    </label>\n    <label class=\"btn btn-outline-primary\">\n        <input type=\"radio\" name=\"potencia\" value=\"60\" autocomplete=\"off\">60\n    </label>\n    <label class=\"btn btn-outline-primary\">\n        <input type=\"radio\" name=\"potencia\" value=\"70\" autocomplete=\"off\">70\n    </label>\n    <label class=\"btn btn-outline-primary\">\n        <input type=\"radio\" name=\"potencia\" value=\"80\" autocomplete=\"off\">80\n    </label>\n    <label class=\"btn btn-outline-primary\">\n        <input type=\"radio\" name=\"potencia\" value=\"90\" autocomplete=\"off\">90\n    </label>\n    <label class=\"btn btn-outline-primary\">\n        <input type=\"radio\" name=\"potencia\" value=\"100\" autocomplete=\"off\">100\n    </label>\n    </div>\n    <a id=\"delete_drive\" onclick=\"deleteFormDrive(" + iFormDrive + ")\"><i class=\"fas fa-times-circle\"></i></a>\n    </div>\n    ";
+    var nodeLi = document.createElement("li");
+    nodeLi.id = "form_drive_" + iFormDrive;
+    nodeLi.className = "group_drive_cross";
+    nodeLi.innerHTML = contentDriveForm;
+    document.getElementById("list_forms_drives").appendChild(nodeLi);
+    iFormDrive++;
+}
+function deleteFormDrive(idForm) {
+    var formToDelete = document.getElementById("form_drive_" + idForm);
+    document.getElementById("list_forms_drives").removeChild(formToDelete);
 }
